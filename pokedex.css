@@ -1,0 +1,162 @@
+
+body {
+    background-image: url('pics/background.jpg');
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    margin: 0;
+  }
+
+  h1 {
+    position: absolute; /* Fixed positioning */
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 68px; 
+    font-weight: bold; 
+    color: rgb(192, 30, 30); 
+    text-wrap: nowrap;
+    z-index: 10; 
+}
+
+  /* Pokedex Container Styling */
+.pokedex {
+    width: 600px; 
+    height: 700px; 
+    background-color: #d92d2d; 
+    border: 4px solid #7a7979; 
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); 
+    position: relative; 
+}
+
+/* Top Screen (For Pokémon Image) */
+.top-screen {
+    width: 400px;
+    height: 300px; 
+    background-color: #85d2f0; 
+    border: 4px solid #2c2c2c; 
+    border-radius: 10px; 
+    margin: 20px auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Bottom Screen (For Pokémon Info) */
+.bottom-screen {
+    width: 260px;
+    height: 190px; 
+    background-color: #85d2f0; 
+    border: 4px solid #363535; 
+    border-radius: 10px; 
+    margin: 70px auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    position: relative; 
+    right: 60px;
+}
+
+/* Buttons */
+.red-button, .blue-button {
+    width: 60px; 
+    height: 30px; 
+    border: 4px solid #2c2c2c; 
+    border-radius: 5px; 
+    margin: 10px auto; 
+    position: relative;
+    bottom: 380px;
+    text-align: center;
+}
+
+.red-button {
+    background-color: #b50000;
+    position: relative;
+    right: 55px;
+}
+
+.blue-button {
+    background-color: #0070c9; 
+    position: relative;
+    right: 200px;
+}
+
+/* D-Pad Styling */
+.dpad {
+    width: 70px; 
+    height: 70px;
+    background-color: #333; 
+    transform: translateY(-50%); 
+    position: relative;
+    bottom: 200px;
+    left: 400px;
+    border-radius: 30%;
+}
+
+/* D-pad styling underneath the actuall DOMs */
+.dpad::before,
+.dpad::after {
+    content: ""; 
+    position: absolute;
+    top: 300px;
+    background-color: #c7c5c5; /* D-pad illusion of crosshair style but only two functional*/
+}
+
+.dpad::before {
+    top: 50%; 
+    left: 0; 
+    right: 0; 
+    height: 20px; 
+    transform: translateY(-50%); 
+}
+
+.dpad::after {
+    left: 50%; 
+    top: 0; 
+    bottom: 0; 
+    width: 20px; 
+    transform: translateX(-50%); 
+}
+
+/* Navigation Buttons on Dpad*/
+#prev-button, #next-button {
+    width: 36px; 
+    height: 20px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 10px;
+    color: white; 
+    background-color: #807c7c; 
+    cursor: pointer; 
+}
+
+#prev-button:hover, #next-button:hover {
+    background-color: #666; 
+}
+#next-button {
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+}
+
+#prev-button {
+    position: relative;
+    top: 15px;
+    right: 12px;
+
+}
+
+
+.button-container, .nav-buttons {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
